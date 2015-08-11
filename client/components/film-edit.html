@@ -1,0 +1,30 @@
+<template name="filmEdit">
+	<div id="{{_id}}" class="editor" data-id="{{_id}}">
+		<form class="col s12 film-edit-form">
+			<div class="row">
+				<div class="input-field col s4">
+					<input name="newTitle" value="{{title}}" id="film-title-edit" type="text" class="validate">
+					<label class="active" for="film-title-edit">Title</label>
+				</div>
+				<div class="input-field col s2">
+					<input name="newYear" value="{{year}}" id="film-year-edit" type="text" class="validate">
+					<label class="active" for="film-year-edit">Year</label>
+				</div>
+				<div class="input-field col s6">
+					<input name="newArt" value="{{artwork}}" id="film-poster-edit" type="text" class="validate">
+					<label for="film-poster-edit"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea name="newSynopsis" id="synopsis-edit" class="materialize-textarea">{{synopsis}}</textarea>
+					<label for="synopsis-edit" class="active">Synopsis</label>
+				</div>
+			</div>
+			<div class="row">
+				<button type="submit" class="btn waves-effect waves-light blue darken-4">Submit</button>
+				<button type="button" class="delete-btn btn waves-effect waves-light red darken-4">Delete</button>
+			</div>
+		</form>
+	</div>
+</template>

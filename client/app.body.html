@@ -1,0 +1,20 @@
+<body>
+<h1 class="main-title">MovieSlate</h1>
+<!--Pull in film creation form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				{{ >filmForm }}
+			</div>
+		</div>
+	</div>
+<!--	Pull in film toolbox/editor -->
+	{{ >toolbox }}
+<!--loop over films and show each-->
+	<div class="films container">
+		{{ #each films }}
+			{{ >film }}
+		{{ /each }}
+	</div>
+	
+</body>

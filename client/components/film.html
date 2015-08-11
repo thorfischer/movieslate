@@ -1,0 +1,56 @@
+<template name="film">
+
+	<div class="film well well-lg" data-id="{{ _id }}">
+		<!--	Film place-->
+		<div class="film-box">
+			<!--		Film poster, title-->
+			<span id="film-poster">
+<!--				<img src="/poster-avengers-placeholder.jpg" alt="" height="200">-->
+				<img src="{{ artwork }}" alt="" height="200">
+				{{#if newBadge}}
+				<div class="ribbon-wrapper-blue">
+					<div class="ribbon-blue">NEW</div>
+				</div>
+				{{/if}}
+			</span>
+			
+			<div class="film-description">
+			
+				<h1 class="film-title">
+					{{ title }} <small id="film-year">{{ year }}</small>
+					<a class="edit-film-btn">
+						<i class="fa fa-pencil-square-o"></i>
+					</a>
+<!--					<span class="{{ newBadge }} ">{{#if newBadge}}<p>New!</p>{{/if}}</span>-->
+				</h1>
+				
+				<div id="film-rating" >
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>
+				</div>
+				
+				<div class="container">
+					{{ >filmEdit }}
+				</div>
+				<p id="{{_id}}" class="synopsis">{{ synopsis }}</p>
+			</div>
+
+		</div>
+
+		{{ #each indexedArray users }}
+		<a href="#" class="saw btn waves-effect waves-light {{ #if seen }} green {{ else }} grey lighten-1 {{ /if }}" data-id="{{ _index }}">
+			<span class="names">{{ name }}</span> {{ #if seen }}
+			<span class="seen"><i class="fa fa-eye fa-2x"></i></span> {{ else }}
+			<span class="unseen"><i class="fa fa-eye-slash fa-2x"></i></span> {{ /if }}
+		</a>
+		{{ /each }}
+
+	</div>
+
+</template>
+
+
+<!-- TODO: 
+	 	 DONE -if created recently, add a new badge to it. 
+		 -Also need to add date created to database. Maybe sort by if recent, then name -->

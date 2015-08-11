@@ -1,0 +1,297 @@
+// SASS/SCSS styles for whole APP
+
+// Change background to black and change text to white
+h1,h2,h3,h4,h5,h6,label,i,input {
+	color: white;
+}
+body {
+	background-color: black;
+	
+//	background-image: url("images/bg-assualt.png");
+}
+.grey.lighten-1 {
+	background-color: rgba(255,255,255,0.2) !important;
+}
+// end of bg and text change
+
+h1.main-title {
+	text-align: center;
+	font-family: "lust-script";
+}
+h1.film-title {
+	font-family: "fira-sans-2";
+	font-weight: 600;
+	a {
+		i {
+			font-size: 14pt;
+			color: aqua;
+		}
+	}
+	#film-year {
+		font-size: 18pt;
+	}
+}
+// icons
+.fa-times {
+	vertical-align: top;
+//	padding-bottom: 3px;
+}
+.fa-eye {
+	color: #00E676;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}
+.fa-eye-slash {
+	color: #FF8A80;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}
+
+body {
+	margin: 36px;
+	font-family: Helvetica;
+}
+h1 {
+}
+button.seen-btn {
+}
+div.films {
+//	margin: 0 auto;
+//	max-width: 1296px;
+}
+div.film {
+	max-width: 1296px;
+	button.delete-btn {
+		font-weight: 700;
+	}
+	a.saw {
+		height: auto;
+		line-height: 1;
+		padding: 6px 12px;
+		margin-top: 12px;
+		text-decoration: none;
+		font-weight: 600;
+		background-color: #3AB3F2;//#3498DB;
+		&:hover {
+			background-color: skyblue;
+			outline: 0;
+		}
+		box-shadow: inset 0 1px rgba(255,255,255,0.36);
+		border-radius: 4px;
+	}
+}
+// Add button style
+button#add-movie {
+	border-radius: 0px;
+	background-color: transparent;
+	border: 1px solid white;
+}
+// Line seperating films
+.film::after {
+	content: "<br>";
+	border-bottom: 2px dotted rgba(244,244,244,0.4);
+	position: relative;
+	margin: 0 auto;
+	top: 0px;
+	width: 90%;
+	display: block;
+}
+// the new badge
+span.badge {
+//	position: inherit;
+//	float: right;
+	display: inline;
+	clear: both;
+	vertical-align: middle;
+//	margin: 26px 0px;
+//	background-color: #AEEE00;
+	font-size: 12pt;
+	font-weight: 700;
+	padding-bottom: 3px;
+	font-family: helvetica;
+	font-weight: 700;
+	color: white;
+	p {
+		margin: 0px 0px;
+		text-shadow: 0px 0px 12px red;
+	}
+}
+// Film poster styling
+.film-box{
+	margin: 12px;
+	min-height: 212px;
+	height: auto;
+	margin-left: 0px;
+	margin-top: 24px;
+	#film-poster {
+		width: 133.33px;
+		float: left;
+		position: relative;
+		margin-right: 24px;
+		img {
+			display: inline-block;
+			vertical-align: baseline;
+			margin-right: 12px;
+//			border: 1px groove white;
+		}
+	}
+	// Film poster new badge
+	.ribbon-wrapper-blue {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-blue {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #bbdefb;//#BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bbdefb), to(#64b5f6)); 
+  background-image: -webkit-linear-gradient(top, #bbdefb,#64b5f6);//#BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #bbdefb,#64b5f6);//#BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #bbdefb,#64b5f6);//#BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #bbdefb,#64b5f6);//#BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-blue:before, .ribbon-blue:after {
+  content: "";
+  border-top:   3px solid #42a5f5 ;//#6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-blue:before {
+  left: 0;
+}
+.ribbon-blue:after {
+  right: 0;
+}
+/////////
+	.film-title {
+		display: inline;
+		vertical-align: top;
+	}
+	.film-description {
+		display: inline;
+		.synopsis {
+			color: white;
+			font-family: "Roboto Slab";
+			font-size: 10pt;
+			text-align: justify;
+			margin: 12px;
+			width: 80%;
+			line-height: 1.2;
+		}
+	}
+}
+// Edit button style
+a.edit-film-btn {
+	&:hover {
+		cursor: pointer;
+	}
+}
+// ********************************************************
+// Borders for debugging
+//#film-rating {
+//	border: 1px solid green;
+//}
+//.rating {
+//	border: 1px solid red;
+//}
+//#film-poster {
+//	border: 1px solid yellow;
+//}
+//.film-title {
+//	border: 1px solid lightblue;
+//}
+////.film-description {
+////	border: 1px solid orange;
+////}
+// ********************************************************
+// Film ratings style
+#film-rating {
+//	display: block;
+	color: gold;
+	.rating > span:hover:before {
+		content: "\2605";
+		position: absolute;
+		cursor: pointer;
+	}
+	.rating {
+		unicode-bidi: bidi-override;
+		direction: rtl;
+		text-align: left;
+	}
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before {
+		content: "\2605";
+		position: absolute;
+		cursor: pointer;
+	}
+}
+// Hide editor to start
+.editor {
+	display: none;
+}
+// Editor textarea
+textarea {
+	color: white;
+	height: auto;
+}
+// Collapsed button style
+.collapsed-btn {
+	padding: 8px;
+	line-height: normal;
+	border-radius: 0px;
+	font-family: "Roboto";
+}
+// Added CSS when Collapsed View is toggled
+.collapsed-view {
+	&.film::after {
+		display: none;
+	}
+	a.edit-film-btn {
+		display: none;
+	}
+	.film-title {
+		font-size: 14pt;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	#film-year {
+		font-size: 8pt !important;
+	}
+	button.delete-btn {
+		display: none;
+	}
+	.film-box {
+		min-height: auto;
+		max-height: 40px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	span.badge {
+		display: none;
+	}
+	#film-rating {
+		display: none;
+	}
+}
