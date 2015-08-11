@@ -13,7 +13,7 @@ The names of the individuals can be changed in <code>client/components/film-form
 ##Installation
 
 Clone the repo then, go into the directory, and run <pre>meteor</pre>
-Then point your browser to [localhost:3000](localhost:3000)
+Then point your browser to [localhost:3000](http://localhost:3000)
 
 ##Notes
 
